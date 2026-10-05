@@ -1,0 +1,48 @@
+{
+    "name": "tyhpdef/pestphp-pest-impl",
+    "description": "Implementation package for tyhpdef/pestphp-pest. Require tyhpdef/pestphp-pest, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "4.7.8.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.3",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/phpunit-phpunit": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/pestphp-pest"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "pestphp/pest": "4.7.8"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/phpunit-phpunit": "@dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
